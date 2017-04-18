@@ -148,13 +148,13 @@ header nav ul li a {
   letter-spacing: 0em;
 }
 
-#some {
+#LeiaMais-inative {
   height: 0;
   opacity: 0;
   transition: 1s;
 }
 
-.aparece {
+.LeiaMais-ative {
   height: 0;
   opacity: 1;
 }

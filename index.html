@@ -34,7 +34,7 @@
 		<img class="ico-lm" src="educap-assets/Assets-05.svg">
 		<p id="LeiaMais" class="lm">leia mais</p>
 		<img class="barend" src="educap-assets/Assets-03.svg">
-		<div id="some">
+		<div id="LeiaMais-inative">
 		<p>
 			Hoje colorido, ajardinado e climatizado, o EDUCAP tem ainda mais estrutura para acolher e apoiar os moradores da comunidade. O grande trunfo do EDUCAP está nos voluntários que não cansam de se reinventar para contribuir com uma comunidade mais saudável e próspera.
 		</p>
@@ -58,8 +58,8 @@
 		</div>
 	</section>
 	<section id="projetos">
-		<h2>aulas de dança</h2>
-		<div>
+		<h2 id="Acontecendo">aulas de dança</h2>
+		<div id="someAct">
 			<img src="fotoselogos/auladança.jpg">
 			<p>
 				Além de melhorar a postura, aumentar a flexibilidade, o alongamento e a força muscular, desenvolver a coordenação motora e estimular a percepção de ritmo e musicalidade, a atividade colabora para a autoconfiança, a memorização e, consequentemente, para a melhora da auto-estima. Para crianças e adolescentes. 
@@ -177,15 +177,15 @@
 		</div>
 	</footer>
 	<script type="text/javascript">
-    function changeClass()
+    function leiaMais()
     {
-    	document.getElementById("some").id = "aparece";
-    	document.getElementById("LeiaMais").id = "some";
+    	document.getElementById("LeiaMais-inative").id = "LeiaMais-ative";
+    	document.getElementById("LeiaMais").id = "LeiaMais-inative";
     }
 
     window.onload = function()
     {
-        document.getElementById("LeiaMais").addEventListener( 'click', changeClass);
+      document.getElementById("LeiaMais").addEventListener( 'click', leiaMais);
     }
 </script>
 </body>
