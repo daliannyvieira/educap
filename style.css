@@ -5,11 +5,38 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'MetaNormal';
+  line-height: 1.2em;
+  color: rgb(153, 153, 153);
+  transition: all 1s;
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
   position: relative;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'MetaBold';
+  src: url('educap-assets/MetaBold.ttf');
+}
+
+@font-face {
+  font-family: 'MetaNormal';
+  src: url('educap-assets/MetaNormal.ttf');
+}
+
+img {
+  max-width: 100%;
 }
 
 header{
@@ -22,8 +49,6 @@ header{
    url(educap-assets/Assets-02.svg) no-repeat -100px 180px,
    url(educap-assets/Assets-03.svg) no-repeat center bottom;
   background-size: 25%, 35%, 92%;
-  /*background: blue;*/
-
 }
 
 .header-item {
@@ -36,7 +61,6 @@ header{
 
 .header-item .logo-educap {
   height: 200px;
-
 }
 
 .header-item p {
@@ -47,6 +71,7 @@ header{
   padding: 0 15px;
   padding-top: 22px;
   padding-bottom: 52px;
+  color: rgb(158, 158, 158);
 }
 
 header nav {
@@ -55,22 +80,13 @@ header nav {
   align-items: flex-end;
   position: fixed;
   z-index: 1;
-  /*background: blue;*/
   background: rgba(255, 255, 255, 0.5);
-  padding: 0;
+  padding: 2% 0;
   width: 100%;
-  height: 90px;
 }
 
 header nav ul {
   display: flex;
-  /*margin: 7% 0;*/
-  padding: 0;
-  
-}
-
-header nav ul li {
-  list-style: none;
 }
 
 header nav ul li a {
@@ -80,7 +96,6 @@ header nav ul li a {
   color: rgb(129, 132, 131);
   text-transform: uppercase;
   text-align: left;
-  line-height: 24px;
   letter-spacing: 0em;
   padding: 10px 10px;
   margin: 0 10px;
@@ -90,40 +105,33 @@ header nav ul li a {
   display: flex;
   justify-content: center; 
   flex-direction: column;
-  padding-top: 43px;
+  margin: 5% 0;
 }
 
 #sobre .img01 {
-  width: 43%;
-  height: auto;
-  margin: 42px auto;
-  border: solid 4px;
-  border-color: linear-gradient(#FFFF9F, #FF9600);
-  padding: 42px; 
+  position: absolute;
+  top: -1%;
+  width: 100%;
+  padding: 32px 42px 42px 42px;
 }
 
 #sobre .img02 {
-  width: 43%;
-  height: auto;
   margin: 0 auto;
 }
 
-#sobre p{
-  font-family: 'Meta-Normal';
+#sobre p {
   font-size: 21px;
   color: rgb(150, 150, 150);
   font-style: normal;
   text-align: left;
   line-height: 25.2px;
   letter-spacing: 0em;
-  width: 41%;
   margin: 0 auto;
   padding-top: 10px;
 }
 
-
 #sobre h2 {
- margin: 3% auto;
+  margin: 3% auto;
 }
 
 #sobre .ico-lm {
@@ -132,14 +140,23 @@ header nav ul li a {
 }
 
 #sobre .lm {
-  font-family: 'Meta-Normal'
   font-size: 17px;
   color: rgb(150, 150, 150);
   font-style: normal;
   text-align: center;
   line-height: 20.4px;
   letter-spacing: 0em;
+}
 
+#some {
+  height: 0;
+  opacity: 0;
+  transition: 1s;
+}
+
+.aparece {
+  height: 0;
+  opacity: 1;
 }
 
 .contribua {
@@ -151,15 +168,145 @@ header nav ul li a {
   max-width: 100%;
 }
 
-#projetos,
-#acontece,
-#contribua {
+#sobre {
   display: flex;
   flex-direction: column;
-  max-width: 43%;
+  max-width: 40%;
 }
 
-footer img {
-  width: 30px;
+#projetos {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
 }
 
+#projetos h2 {
+  font-family: 'MetaBold'
+}
+
+#acontece {
+  display: flex;
+  flex-direction: row;
+  max-width: 80%;
+  margin: 5% 0;
+}
+
+#acontece h2 {
+  font-family: "MetaBold";
+  font-size: 21px;
+  color: rgb(3, 111, 239);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: left;
+  line-height: 25.2px;
+  letter-spacing: 0em;
+}
+
+#acontece .video {
+  padding: 2% 0;
+  width: 60%
+}
+
+#acontece .video video {
+  width: 100%;
+}
+
+#acontece .img {
+  padding: 2% 1%;
+  max-width: 20%;
+}
+
+#acontece img {
+  width: 200px;
+  height: 200px;
+  background: rgb(3, 111, 239);
+}
+
+#contribua {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#contribua .container {
+  display: flex;
+  max-width: 60%;
+}
+
+#contribua p {
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+#contribua h2 {
+  line-height: 1.2em;
+}
+
+#contribua .contri {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4%;
+  margin: 20% 0;
+  width: 35%;
+  text-align: center;
+}
+
+#contribua {
+  background: url(educap-assets/Assets-09.svg) no-repeat 100% 5%,
+   url(educap-assets/Assets-10.svg) no-repeat 10px 90%;
+  background-size: 20%, 15%;
+}
+
+footer {
+  display: flex;
+  padding: 2% 0;
+  background: #eee;
+  width: 100%;
+}
+
+footer .container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+footer p {
+  padding: 0em;
+  margin: .5em 0;
+}
+
+footer .social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 30%;
+}
+
+footer .social img {
+  width: 40px;
+  margin-right: 1em;
+}
+
+footer .parceiros img {
+  width: 70px;
+  margin-right: 1em;
+}
+
+footer .contato {
+  max-width: 70%;
+}
+
+#projetos div {
+  display: flex;
+}
+
+#projetos div img {
+  max-width: 450px;
+  height: 250px;
+}
+
+#projetos div p {
+  padding: 0 2%;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
