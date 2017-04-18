@@ -310,3 +310,45 @@ footer .contato {
   font-size: 1.2em;
   line-height: 1.4em;
 }
+
+@media (max-width: 800px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 0;
+  }
+  header nav ul li {
+    padding: 4% 0;
+  }
+  .header-item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-item p {
+    width: 70%;
+  }
+  #sobre {
+    max-width: 70%;
+  }
+  .logo-educap {
+    max-width: 70%;
+  }
+  #projetos div,
+  #acontece,
+  #contribua .container,
+  footer .container {
+    flex-direction: column;
+  }
+  #acontece .video {
+    width: 100%;
+  }
+  #acontece .img {
+    max-width: 100%;
+  }
+  #contribua .contri {
+    width: 100%;
+  }
+  footer .social {
+    max-width: 100%;
+  }
+}
